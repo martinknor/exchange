@@ -11,6 +11,13 @@ use Nette\DI\CompilerExtension;
  * Nette\Config\Compiler, Nette\DI\Compiler
  * Nette\Utils\PhpGenerator\ClassType, Nette\PhpGenerator\ClassType
  */
+ if (!class_exists('h4kuna\INumberFormat')) {
+    class_alias('h4kuna\Number\INumberFormat', 'h4kuna\INumberFormat');
+    class_alias('h4kuna\Number\NumberException', 'h4kuna\NumberException');
+    class_alias('h4kuna\Number\NumberFormat', 'h4kuna\NumberFormat');
+    class_alias('h4kuna\Number\Tax', 'h4kuna\Tax');
+    class_alias('h4kuna\Number\Vat', 'h4kuna\Vat');
+}
 final class ExchangeExtension extends CompilerExtension {
 
     public $defaults = array(
